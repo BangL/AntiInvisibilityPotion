@@ -53,7 +53,6 @@ public class Event implements Listener {
     public void onPlayeruse(final PlayerInteractEvent event) {
         final ItemStack item = event.getItem();
         if (item != null) {
-            final Player player = event.getPlayer();
             final Material playerInMate = item.getType();
 
             if (playerInMate == Material.POTION)
@@ -75,6 +74,8 @@ public class Event implements Listener {
                     // TODO: handle exception
                     return;
                 }
+
+                final Player player = event.getPlayer();
 
                 // Deny if...
                 // The potion is an invisibility potion
