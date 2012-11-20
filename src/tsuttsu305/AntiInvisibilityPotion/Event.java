@@ -1,4 +1,4 @@
-package tsuttsu305.Main;
+package tsuttsu305.AntiInvisibilityPotion;
 
 import java.util.ArrayList;
 import java.util.List;
