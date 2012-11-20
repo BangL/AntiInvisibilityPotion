@@ -51,17 +51,17 @@ public class Event implements Listener {
     @SuppressWarnings({ "deprecation" })
     @EventHandler (priority = EventPriority.HIGHEST)
     public void onPlayeruse(final PlayerInteractEvent event) {
+        final ItemStack item = event.getItem();
         if (event.getItem() != null) {
             final Player player = event.getPlayer();
-            final ItemStack playerInHand = player.getItemInHand();
-            final Material playerInMate = playerInHand.getType();
+            final Material playerInMate = item.getType();
 
             if (playerInMate == Material.POTION)
             {
                 Potion po;
                 //NoEffects Potion Avoid errors
                 try {
-                    po = Potion.fromItemStack(playerInHand);
+                    po = Potion.fromItemStack(item);
                 } catch (Exception e) {
                     // TODO: handle exception
                     return;
