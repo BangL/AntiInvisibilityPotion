@@ -52,7 +52,7 @@ public class Event implements Listener {
     @EventHandler (priority = EventPriority.HIGHEST)
     public void onPlayeruse(final PlayerInteractEvent event) {
         final ItemStack item = event.getItem();
-        if (event.getItem() != null) {
+        if (item != null) {
             final Player player = event.getPlayer();
             final Material playerInMate = item.getType();
 
